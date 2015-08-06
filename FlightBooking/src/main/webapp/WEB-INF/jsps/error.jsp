@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Error page</h1>
+<h1>Error page using git</h1>
 </body>
 </html>
