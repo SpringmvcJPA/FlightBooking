@@ -27,6 +27,11 @@ public class SearchFlightService {
 		
 		 return searchFlightRep.save(serflightdetails);
 	}
+
+	public List<SearchFlightDetailsVO> getSearchDetails() {
+		// TODO Auto-generated method stub
+		return searchFlightRep.getSearchDetails();
+	}
 	
 	
 }

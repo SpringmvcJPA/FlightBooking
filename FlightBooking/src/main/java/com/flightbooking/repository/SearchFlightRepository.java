@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -47,5 +48,17 @@ public class SearchFlightRepository {
 		return serflightdetails;
 			
 		
+	}
+
+
+
+	public List<SearchFlightDetailsVO> getSearchDetails() {
+		
+		Query query=em.createQuery("select s from SearchFlightDetailsVO s");
+		
+		List searchdetails =query.getResultList();
+		
+				
+		return searchdetails;
 	}
 }

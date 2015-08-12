@@ -48,4 +48,15 @@ public class SearchFlightController {
 		return"searchflight";
 	}
 	
+	
+	@RequestMapping(value="/getSearchDetails", method=RequestMethod.GET)
+	public String getSearchFlightDetails(Model model){
+		
+		List<SearchFlightDetailsVO> searchFlightDetails= searchflightSer.getSearchDetails();
+		
+		model.addAttribute("searchflightdetails",searchFlightDetails);
+		
+		
+		return"getSearchDetails";
+	}
 }
